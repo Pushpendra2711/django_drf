@@ -30,6 +30,11 @@ jobs:
       - name: Run tests
         run: |
           python manage.py test
+      
+      - name: Run black
+        run: |
+          pip install black
+          black .
 
       - name: Run flake8 
         run: |
